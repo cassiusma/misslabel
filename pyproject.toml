@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.backends.legacy:build"
+
+[project]
+name = "misslabel"
+version = "0.1.0"
+description = "Controlled directional label noise injection for classifier robustness studies"
+authors = [{name = "Your Name", email = "you@example.com"}]
+license = {text = "MIT"}
+requires-python = ">=3.9"
+dependencies = ["numpy>=1.24", "scipy>=1.10", "scikit-learn>=1.3"]
+
+[project.optional-dependencies]
+dev = ["pytest", "black", "ruff"]
+
+[tool.ruff]
+line-length = 88
