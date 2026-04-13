@@ -1,8 +1,8 @@
 # misslabel
 
-Controlled label noise injection for classifier robustness studies.
+Misslabel datasets for classifier robustness studies.
 
-`misslabel` corrupts a label vector using the **F81 continuous-time Markov chain** (Felsenstein 1981), a principled noise model from phylogenetics. A single parameter $t \geq 0$ controls noise intensity. The stationary distribution $\pi$ is estimated from the empirical label frequencies of your dataset.
+`misslabel` corrupts a label vector using the **F81 continuous-time Markov model** (Felsenstein 1981), a well-studied noise model from phylogenetics. A single parameter $t \geq 0$ controls noise intensity. The stationary distribution $\pi$ is estimated from the empirical label frequencies of your dataset.
 
 ---
 
@@ -128,7 +128,7 @@ Returns a dict with keys: `n`, `k`, `n_flipped`, `flip_rate`, `per_class`,
 
 Estimate the empirical noise transition matrix $\hat{T}$ from paired label vectors.
 
-$$\hat{T}_{ij} = \frac{\#\{y_\text{true}=i,\ y_\text{noisy}=j\}}{\#\{y_\text{true}=i\}}$$
+$$\hat{T}_{ij} = \frac{ | \{y_\text{true}=i \text{ and }\ y_\text{noisy}=j\} | }{| \{y_\text{true}=i\} | }$$
 
 ---
 
