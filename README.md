@@ -128,7 +128,7 @@ Returns a dict with keys: `n`, `k`, `n_flipped`, `flip_rate`, `per_class`,
 
 Estimate the empirical noise transition matrix $\hat{T}$ from paired label vectors.
 
-$$\hat{T}_{ij} = \frac{\{y_\text{true}=i,\ y_\text{noisy}=j\}}{\{y_\text{true}=i\}}$$
+$$\hat{T}_{ij} = \frac{\{y_\text{true}=i \text{and}\ y_\text{noisy}=j\}}{\{y_\text{true}=i\}}$$
 
 ---
 
