@@ -36,7 +36,7 @@ from misslabel.matrix import estimate_pi, f81_transition_matrix
 # Configuration
 # ---------------------------------------------------------------------------
 
-T_GRID = [0.0, 0.1, 0.25, 0.5, 0.75, 1.0, 1.5, 2.0, 3.0, 5.0]
+T_GRID = np.arange(0, 1.1, 0.05)
 N_SPLITS = 5       # stratified k-fold for evaluation
 RANDOM_STATE = 42
 
